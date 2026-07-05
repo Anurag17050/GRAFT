@@ -34,25 +34,25 @@ Bitcoin OTC CSV
       ▼
 ┌─────────────────────────────────────────────────┐
 │              GRAPH LOADER & PREPROCESSOR        │
-│  Trust normalisation: raw[-10,+10] → [0.0,1.0] │
+│  Trust normalisation: raw[-10,+10] → [0.0,1.0]  │
 │  Builds: adjacency list, edge trust map,        │
 │          incoming/outgoing score tables         │
 └───────────────────┬─────────────────────────────┘
                     │
         ┌───────────┴───────────┐
         ▼                       ▼
-┌──────────────┐       ┌────────────────────────────┐
-│  PART 1      │       │  PART 2                    │
-│  SAFE ROUTING│       │  DESTINATION CLASSIFICATION│
-│              │       │                            │
-│  BFS (AODV)  │       │  Four-Signal Ensemble      │
-│  Dijkstra    │       │  Signal 1 (45%): avg_in    │
-│  Q-Learning ─┼──────▶│  Signal 2 (30%): fraud_    │
-│  (Persistent)│       │              vote ratio    │
-└──────┬───────┘       │  Signal 3 (15%): neg_ratio │
-       │               │  Signal 4 (10%): avg_out   │
-       ▼               │  + Live RL trust blend     │
-  Q-table.json         └────────────────────────────┘
+┌──────────────┐        ┌────────────────────────────┐
+│  PART 1      │        │  PART 2                    │
+│  SAFE ROUTING│        │  DESTINATION CLASSIFICATION│
+│              │        │                            │
+│  BFS (AODV)  │        │  Four-Signal Ensemble      │
+│  Dijkstra    │        │  Signal 1 (45%): avg_in    │
+│  Q-Learning ─┼──────▶ │  Signal 2 (30%): fraud_   │
+│  (Persistent)│        │              vote ratio    │
+└──────┬───────┘        │  Signal 3 (15%): neg_ratio │
+       │                │  Signal 4 (10%): avg_out   │
+       ▼                │  + Live RL trust blend     │
+  Q-table.json          └────────────────────────────┘
   phase.json
   stats.json
   node_reputation.json
