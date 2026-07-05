@@ -33,7 +33,7 @@
     * Added dataset imbalance summary
 
   HOW TO RUN:
-    python3 trust_manet_v2.py
+    python3 final.py
     Run MULTIPLE TIMES with the same pair to see improvement.
     Delete q_table.json to start completely fresh.
 
