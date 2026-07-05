@@ -1,6 +1,6 @@
 # GRAFT — Game-Theoretic Reinforcement Learning for Adaptive Fraud Detection and Trust-Aware Routing
 
-> **Under Review** | CSE Department, Visvesvaraya National Institute of Technology (VNIT) Nagpur
+> **Faculty-Reviewed** | CSE Department, Visvesvaraya National Institute of Technology (VNIT) Nagpur | Co-author : Supraja Soudu; Faculty-Advisor : Prof. Anshul Agarwal
 
 ---
 
